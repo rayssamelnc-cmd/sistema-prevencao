@@ -1,0 +1,51 @@
+<div class="tela-vacinas" id="pdf-vacinas">
+
+  <header class="cabecalho">
+    <h2 class="titulo-vacinas">Minhas Vacinas</h2>
+
+    <!-- BOTÃO PDF -->
+    <button class="btn-pdf" (click)="gerarPDF()">
+      Baixar PDF
+    </button>
+  </header>
+
+  <div class="abas">
+    <button class="aba" [class.ativa]="abaAtiva === 'tomadas'" (click)="mudarAba('tomadas')">Tomadas</button>
+    <button class="aba" [class.ativa]="abaAtiva === 'pendentes'" (click)="mudarAba('pendentes')">Pendentes</button>
+  </div>
+
+  <main class="vacina-list">
+
+    <ng-container *ngIf="abaAtiva === 'tomadas'">
+
+      <div class="vacina-card em-dia">
+        <h2>HEPATITE B</h2>
+        <p>Última dose: 12/03/2024</p>
+        <p>Próxima: 10/09/2025</p>
+      </div>
+
+      <div class="vacina-card em-dia">
+        <h2>FEBRE AMARELA</h2>
+        <p>Última dose: 05/07/2019</p>
+        <p>Vitalícia</p>
+      </div>
+
+    </ng-container>
+
+    <ng-container *ngIf="abaAtiva === 'pendentes'">
+
+      <div class="vacina-card pendente">
+        <h2>GRIPE</h2>
+        <p>Todo ano em Abril</p>
+      </div>
+
+      <div class="vacina-card pendente">
+        <h2>COVID-19</h2>
+        <p>Reforço anual</p>
+      </div>
+
+    </ng-container>
+
+  </main>
+
+</div>

@@ -1,7 +1,5 @@
-<!-- historico/remedios/remedios.html -->
 <div class="aba-remedios">
  
-  <!-- cards de resumo -->
   <div class="grid2">
     <div class="card-resumo">
       <p class="r-label">Esta semana</p>
@@ -15,7 +13,6 @@
     </div>
   </div>
  
-  <!-- gráfico de adesão -->
   <p class="sec-titulo">Adesão do mês</p>
   <div class="card-adesao">
     <div class="adesao-topo">
@@ -31,7 +28,6 @@
     </div>
   </div>
  
-  <!-- calendário semanal -->
   <p class="sec-titulo">Esta semana</p>
   <div class="cal">
     <div class="dia-col" *ngFor="let d of semana">
@@ -45,7 +41,6 @@
     <span class="leg-item"><span class="dot ci"></span>Pendente</span>
   </div>
  
-  <!-- lista cronológica -->
   <p class="sec-titulo">Últimos registros</p>
   <div class="lista">
     <div class="item" *ngFor="let r of registros">
@@ -65,4 +60,3 @@
   <button class="btn-pdf" (click)="gerarPDF()">📄 Exportar relatório PDF</button>
  
 </div>
- 
